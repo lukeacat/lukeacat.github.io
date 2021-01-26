@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>luke's epic art website</title>
+  </head>  
+  <body>
+      <marquee class="cap"></marquee>
+      <center>newest art entry at time: <span id="time"></span>!!</center>
+    
+       <table style="width:100%">
+        <tr>
+          <th><img id="chill_pill"></th>
+          <th><img id="cow"></th>
+          <th><img id="egg"></th>
+         </tr>
+        <tr>
+          <th><img id="familiar_face"></th>
+          <th><img id="herobrine"></th>
+          <th><img id="music"></th>
+         </tr>
+         <tr>
+          <th><img id="owl"></th>
+          <th><img id="rain_quote"></th>
+          <th><img id="shiber"></th>
+         </tr>
+      </table> 
+      <marquee class="cap"></marquee>
+    
+      <!-- the code is horrible on purpose. it works and i like it.-->
+    </body>
+  <script>
+    // get time at https://www.epochconverter.com/
+    
+    let motd = "dyin' on the weekend like usual";
+    let arttime = 1611689919;
+    
+    [...document.getElementsByClassName("cap")].forEach(e=>e.innerHTML=motd);
+    document.getElementById("time").innerHTML = new Date(arttime*1000).toLocaleString();
+    document.querySelectorAll("img").forEach(e=>e.src=`https://dogwiththebutteronhim.tk/art/${e.id}.png`);
+  </script>
+</html>

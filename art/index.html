@@ -26,7 +26,11 @@
          <tr>
           <th><img id="rwitch"></th>
           <th><img id="broken_egg"></th>
-          <th></th>
+          <th><img id="art"></th>
+         </tr>
+         <tr>
+          <th><img id="beat_around_the_bush"></th>
+          <th><img id="roblox"></th>
          </tr>
       </table> 
       <marquee class="cap"></marquee>
@@ -36,11 +40,13 @@
   <script>
     // get time at https://www.epochconverter.com/
     
-    let motd = "i be dying and dying and dying and dying and dying and dying and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying  and dying and dying and dying and dying and dying";
-    let arttime = 1611736649;
-    
-    [...document.getElementsByClassName("cap")].forEach(e=>e.innerHTML=motd);
-    document.getElementById("time").innerHTML = new Date(arttime*1000).toLocaleString();
+    const settings = {
+      motd: Math.random() * Number.MAX_SAFE_INTEGER,
+      arttime: 1611766875
+    }
+
+    [...document.getElementsByClassName("cap")].forEach(e=>e.innerHTML=settings.motd);
+    document.getElementById("time").innerHTML = new Date(settings.arttime*1000).toLocaleString();
     document.querySelectorAll("img").forEach(e=>e.src=`https://dogwiththebutteronhim.tk/art/${e.id}.png`);
   </script>
 </html>
